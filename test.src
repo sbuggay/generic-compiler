@@ -1,0 +1,4 @@
+func test(a, b, c) {
+    ret 1;
+}
+
