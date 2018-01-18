@@ -1,15 +1,30 @@
-export const tokens: [[string, RegExp]] = [
-    ["func", /^\bfunc\b/],
-    ["ret", /^\bret\b/],
-    ["oparen", /^\(/],
-    ["cparen", /^\)/],
-    ["ocurly", /^{/],
-    ["ccurly", /^}/],
-    ["identifier", /^[a-zA-Z]+/],
-    ["integer", /^[0-9]+/],
-    ["semicolon", /^;/],
-    ["period", /^\./],
-    ["comma", /^\,/],
+export enum TOKEN {
+    FUNC,
+    RET,
+    OPAREN,
+    CPAREN,
+    OCURLY,
+    CCURLY,
+    IDENTIFIER,
+    INTEGER,
+    SEMICOLON,
+    PERIOD,
+    COMMA,
+};
+
+
+export const tokens: [[TOKEN, RegExp]] = [
+    [TOKEN.FUNC, /^\bfunc\b/],
+    [TOKEN.RET, /^\bret\b/],
+    [TOKEN.OPAREN, /^\(/],
+    [TOKEN.CPAREN, /^\)/],
+    [TOKEN.OCURLY, /^{/],
+    [TOKEN.CCURLY, /^}/],
+    [TOKEN.IDENTIFIER, /^[a-zA-Z]+/],
+    [TOKEN.INTEGER, /^[0-9]+/],
+    [TOKEN.SEMICOLON, /^;/],
+    [TOKEN.PERIOD, /^\./],
+    [TOKEN.COMMA, /^\,/],
 ];
 
 export class Tokenizer {
