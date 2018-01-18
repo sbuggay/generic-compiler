@@ -1,3 +1,9 @@
+/**
+ * Token types
+ * 
+ * @export
+ * @enum {number}
+ */
 export enum TOKEN {
     FUNC,
     RET,
@@ -11,7 +17,6 @@ export enum TOKEN {
     PERIOD,
     COMMA,
 };
-
 
 export const tokens: [[TOKEN, RegExp]] = [
     [TOKEN.FUNC, /^\bfunc\b/],
@@ -27,6 +32,12 @@ export const tokens: [[TOKEN, RegExp]] = [
     [TOKEN.COMMA, /^\,/],
 ];
 
+/**
+ * Takes in raw string data and outputs the equivalent token map
+ * 
+ * @export
+ * @class Tokenizer
+ */
 export class Tokenizer {
 
     code: string;
@@ -60,6 +71,12 @@ export class Tokenizer {
     }
 }
 
+/**
+ * Token class
+ * 
+ * @export
+ * @class Token
+ */
 export class Token {
     public type;
     public value;
